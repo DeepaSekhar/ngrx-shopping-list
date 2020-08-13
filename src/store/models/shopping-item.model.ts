@@ -1,6 +1,6 @@
 
 
-export interface ShoppinItem {
+export interface ShoppingItem {
     id?: string;
     name: string;
 }
