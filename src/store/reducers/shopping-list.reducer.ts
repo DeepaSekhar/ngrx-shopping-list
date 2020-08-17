@@ -7,7 +7,7 @@ const initialState: ShoppingItem = {
     name: 'diet-coke'
 }
 
-export function reducer(state: ShoppingItem[] = [initialState], action: shoppingItems.Actions) {
+export function ShoppingReducer(state: ShoppingItem[] = [initialState], action: shoppingItems.Actions) {
     switch (action.type) {
         case shoppingItems.ADD_ITEM:
             return [...state, action.payload];
