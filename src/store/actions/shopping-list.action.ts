@@ -13,6 +13,8 @@ export class AddItemAction implements Action {
 }
 export class DeleteItemAction implements Action {
     readonly type = ShoppingActionTypes.DELETE_ITEM;
-    constructor(public payload: string) { }
+    constructor(public payload: string) {
+        console.log("action=", payload);
+    }
 }
 export type ShoppingActions = AddItemAction | DeleteItemAction 

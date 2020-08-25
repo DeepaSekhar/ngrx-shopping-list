@@ -10,9 +10,11 @@ const initialState: ShoppingItem = {
 export function ShoppingReducer(state: ShoppingItem[] = [initialState], action: ShoppingActions) {
     switch (action.type) {
         case ShoppingActionTypes.ADD_ITEM:
+            console.log("ADD", action.type);
             return [...state, action.payload];
         case ShoppingActionTypes.DELETE_ITEM:
             return state.filter(item => item.id !== action.payload)
+            console.log("Delete", action.type);
         default:
             return state;
     }
